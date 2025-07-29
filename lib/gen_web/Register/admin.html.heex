@@ -1,0 +1,46 @@
+  <h1 class="text-2xl font-bold text-center mb-6">Register Admin</h1>
+
+  <.form 
+    for={@form} 
+    as={:admin} 
+    phx-change="validate" 
+    phx-submit="submit" 
+  >
+    <.input 
+      field={@form[:name]} 
+      type="text" 
+      label="Name" 
+      required 
+    />
+
+    <.input 
+      field={@form[:email]} 
+      type="email" 
+      label="Email" 
+      required 
+      class="w-full px-3 py-2 border rounded-md"
+    />
+
+    <.input 
+      field={@form[:role]} 
+      type="text" 
+      label="Role" 
+      required 
+      class="w-full px-3 py-2 border rounded-md"
+    />
+
+    <.input 
+      field={@form[:password]} 
+      type="password" 
+      label="Password" 
+      required 
+    />
+
+    <.button 
+      type="submit" 
+    >
+      Create Admin
+    </.button>
+    <br /> have an account?
+    <a href="/login/admin" class="text-blue-600 hover:underline ml-2">Log in</a>
+  </.form>
