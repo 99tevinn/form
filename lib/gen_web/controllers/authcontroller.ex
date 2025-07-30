@@ -30,7 +30,6 @@ defmodule GenWeb.AuthController do
     end
   end
 
-  @spec logout(Plug.Conn.t(), any()) :: Plug.Conn.t()
   def logout(conn, _params) do
     conn
     |> configure_session(drop: true)
